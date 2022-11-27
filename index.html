@@ -1,23 +1,41 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="functions.js"></script>
-    <title>Botão</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
+
+    <title>CRUD Javascript</title>
 </head>
 <body>
-    <div class="containerEntrada">
-        <div class="entrdas">
-            <Label>Nome</Label><br>
-            <input type="text" id="nome"><br>
-            <label>Matrícula</label><br>
-            <input type="text" id="matricula"><br>
-            <label>Função</label><br>
-            <input type="text" id="funcao"><br><br>
-            <button onclick="salvar()">Salvar</button>
-        </div>
-    </div>
+    <div id="nav">
+        <h1>CRUD - Javascript </h1>
+    </div><br><br>
+    <section id="table">
+        <form method="put">
+            <div id="input-data">
+                <input id="name" class="input-text" placeholder="Nome" type="text" required />
+                <input id="email" class="input-text" placeholder="Email" type="email" required />
+                <input id="phone" class="input-text" placeholder="Telefone" type="number" required />
+                <input id="work" class="input-text" placeholder="Profissão" type="text" required />
+                <input class="input-btn" type="submit" value="Enviar" onclick="return addToTable()" />
+            </div>
+        </form><br><br>
+        <table id="myTable" border="1">
+            <tr id="0">
+                <th>ID</th>
+                <th>Nome</th>
+                <th>Email</th>
+                <th>Telefone</th>
+                <th>Profissão</th>
+                <th>Ação</th>
+            </tr>
+        </table>
+    </section>
 </body>
 </html>
